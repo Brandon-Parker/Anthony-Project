@@ -1,0 +1,207 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.nav-tabs > li > a').click(function(event){
+					event.preventDefault();
+					var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');
+
+					//find actived navigation and remove 'active' css
+					var actived_nav = $('.nav-tabs > li.active');
+					actived_nav.removeClass('active');
+
+					//add 'active' css into clicked navigation
+					$(this).parents('li').addClass('active');
+
+					//hide displaying tab content
+					$(active_tab_selector).removeClass('active');
+					$(active_tab_selector).addClass('hide');
+
+					//show target tab content
+					var target_tab_selector = $(this).attr('href');
+					$(target_tab_selector).removeClass('hide');
+					$(target_tab_selector).addClass('active');
+				});
+			});
+		</script>
+
+		<style>
+      .content {
+        border: #ddd 0px solid;
+        background: white;
+        overflow: scroll;
+        max-height: 85vh;
+        font-family: Tahoma;
+      }
+			.nav {
+			  margin-bottom: 10px;
+			  margin-left: 0;
+			  list-style: none;
+				max-width: 100%;
+			}
+			.nav ul{
+				max-width: 100%;
+			}
+			.nav-tabs{
+        border-bottom: 1px solid #ddd;
+				max-width: 100%;
+			}
+			.nav-tabs:before,
+			.nav-tabs:after {
+			  display: table;
+			  content: "";
+			}
+			.nav-tabs:after {
+			  clear: both;
+			}
+
+			.nav-tabs > li {
+				display: inline-block;
+			}
+
+			.nav-tabs > li > a {
+        display:block;
+				/*float: left;*/
+				max-width: 100%;
+				box-sizing: border-box;
+				text-decoration: none;
+				background-color: #7a5425;
+				font-family: tahoma;
+				color: #fff;
+				text-align: center;
+			  padding-top: 5%;
+			  padding-bottom: 5%;
+        margin-right: 2%;
+			  border: 1px transparent;
+			  -webkit-border-radius: 4px 4px 0 0;
+				-moz-border-radius: 4px 4px 0 0;
+			  border-radius: 4px 4px 0 0;
+			}
+
+			.nav-tabs > li > a:hover {
+			  border-color: #eeeeee #eeeeee #dddddd;
+			}
+
+			.nav-tabs > .active > a,
+			.nav-tabs > .active > a:hover {
+			  color: #555555;
+			  cursor: default;
+			  background-color: #ffffff;
+			  border: 1px solid #ddd;
+			  border-bottom-color: transparent;
+			}
+
+			li {
+			  line-height: 18px;
+			}
+
+			.tab-content.active{
+				display: block;
+        overflow: auto;
+			}
+			.tab-content.hide{
+				display: none;
+			}
+		</style>
+	</div>
+</head>
+
+  <body>
+		<header>
+			<nav>
+				<ul class="nav-tabs">
+					<li class="active">
+						<a href="#tab1">Itinerary</a>
+					</li>
+					<li>
+						<a href="#tab2">Pricing Details</a>
+					</li>
+					<li>
+						<a href="#tab3">Learn - Serve - Immerse</a>
+					</li>
+					<li>
+						<a href="#tab4">Tour Partners</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="content">
+      <section id="tab1" class="tab-content active">
+			<div>
+        <font color = #de622c> Days 1-4: Beijing </font>
+          <p><font color = #000>
+              Beijing is the capital of China and in important hub of culture, art and higher education. Enjoy two packed days of activity in this city where you will visit the 500 year old Imperial Palace known as the Forbidden City, hike along one of the most well preserved sections of the Great Wall, and take the ride of your life as you “slide” down from the wall in a five minute toboggan ride through the forested hillside. You will also have time to wander the pleasant maze of narrow, pedestrian alleyways known as Hutongs where we’ll meet with a local family who will teach us to make dumplings and also with a local artisan to learn some ancient handicrafts.</font></p>
+
+        <font color = #de622c> Days 5-6: Xi’an, Shaanxi Province</font>
+					<p>Xi’an is just a short flight Southwest of Beijing toward China’s interior. One of the oldest cities in China, Xi’an has more than 3100 years of history and was one of the four Great Ancient Capitals. Xi’an is home to the Terracotta Army, an archaeological treasure of thousands of terracotta sculptures depicting the armies of the first Emperor of China. A form of funerary art buried with the emperor in 210–209 BC, the purpose of the army was to protect the emperor in his afterlife. Standing together in formation, the terracotta figures form an awe inspiring site. While in Xi’an we will also visit the Muslim quarter, a relic of China’s silk trade, and walk the Xi’an city wall, one of the most well preserved in the country.</p>
+
+        <font color = #de622c>Day 6-7: Chengdu</font>
+          <p>The capital of Sichuan Province, Chengdu is located at the western edge of the Sichuan Basin and sits on the Chengdu Plain. During our two days here, you will visit a dinosaur museum built on top of the world’s largest concentration of dinosaur bones, experience the Chinese dramatic art of “face- changing”, and visit a temple honoring the emperors of the three kingdom period.</p>
+
+        <font color = #de622c>Day 8: Chengdu via Leshan, Sichuan Province</font>
+					<p>From Chengdu, we will stop in Leshan to visit the giant Buddha statue, built in the Tang dynasty. (618–907AD). Towering over the confluence of three rivers, the Minjiang, Dadu and Quingyi, the stone sculpture is carved into the cliff face, and stands 233 feet tall. It is by far the largest Buddha in the world.</p>
+
+        <font color = #de622c>Day 9: Dujiangyan Panda Center- Chengdu</font>
+          <p>Today we volunteer to help the staff care for the Giant Pandas at the Dujiangyan Base Panda Keeper Program.  Activities include cleaning panda enclosures, preparing panda food, and planting bamboo and trees.</p>
+
+        <font color = #de622c>Day 10: Chengdu – Maoxian</font>
+					<p>After a morning orientation by Kanghua NGO about the project we will be helping with in Maoxian, we then proceed to drive to Maoxian County, an area that was badly impacted by the earthquake of 2008.   Upon arrival, we’ll tour the village and get acquainted with our local host families. During the homestay, part of our days will be spent with your host family helping in daily chores, tending animals, working fields, playing with the children or getting to know your family. Maoxian County is home to the largest number of Qiang minority people who were inhabitants of west China even in ancient times. Their activities were carved on tortoise shells, tracing back to as early as the Shang Dynasty (1600-1046 B.C.). During the Qin Dynasty (221-206 B.C.), they began to migrate to other places and part of them came to Maoxian County. Maoxian is an also area that was badly impacted by the earthquake of 2008 and Kanghua has been helping them to rebuild the community by different methods.</p>
+
+				<font color = #de622c>Day 11-12: Maoxian Volunteer Work and Homestay</font>
+					<p>For these next two days, you will have the opportunity to live and work with your host family and participate in a community service project with local villagers. In an effort to help you learn what it means to be a local and understand the life of your family, we do not ask our hosts to do anything special for our stay.
+    				About Kanghua’s Community Volunteer Projects in Maoxian</p>
+
+        <font color = #de622c>Day 13: Chengdu-Beijing</font>
+					<p>Morning transfer back to Chengdu, afternoon fly to Beijing.  Free time to explore the city.</p>
+
+    		<font color = #de622c>Day 14: Beijing</font>
+         	<p>Free time to explore the city.</p>
+
+	      <font color = #de622c>Day 15: Depart for Home</font>
+          <p>Beijing airport for flight home. Global Family Travels staff will arrange for your transport to the airport.</p>
+      </div>
+		</section>
+		<section id="tab2" class="tab-content hide">
+			<div>
+        <p><font color = #de622c> Price*: $3750</font> (Ask about discounts for children under age 10)</p>
+            <font color = #de622c> Tour price includes: </font>
+              <li>A national tour leader during the entire trip</li>
+              <li>Private English speaking local guides in each region</li>
+              <li>All accommodations mentioned in the program, hotel room based on double occupancy</li>
+              <li>All transportation within tour will be in private & air-conditioned vehicles</li>
+              <li>Entrance fee for all sights mentioned in the program</li>
+              <li>All daily meals, including breakfast, lunch & dinner</li>
+              <li>In-country Airfare</li>
+
+        <p><font color = #de622c>Price does not include:</font></p>
+            <li>Chinese Tourist Visa</li>
+            <li>International flight with tax and fuel surcharge</li>
+            <li>Alcoholic beverages</li>
+            <li>Gratuities for guides and drivers</li>
+            <li>Personal expenses</li>
+            <li>Travel Insurance</li>
+        <p><font color = #de622c>*Pricing based on 2016 rates. Please contact us by <a href="mailto:info@globalfamilytravels.com"><font color = #000> email</font></a> or by phone, 206-890-3442 for 2017 rates.</font></p>
+      </div>
+		</section>
+		<section id="tab3" class="tab-content hide">
+			<div>
+        <font color = #de622c>LEARN:</font> At Global Family Travels we believe that the most powerful way to learn is through first-hand experience. We let the country and its people be your teachers and supplement your experiences with reading lists, informal discussions, and a pre-trip orientation. Your orientation will include information on the culture and history of your host country, helpful words and phrases, and tips on cultural “do’s and don’ts.” Learning themes unique to this tour include:
+	        <ul>Culture and History of China</ul>
+					<ul>Endangered species preservation and restoration – Specifically, China’s Giant Pandas</ul>
+	        <ul>Local lifestyle of Qiang minority popluation</ul>
+            <p><font color = #de622c>SERVE:</font> This tour offers the cultural immersion opportunity for families to contribute to a community development project  and to work with wildlife at a panda sanctuary, both located in Sichuan Province.   For the community-based development work,  Global Family Travels has partnered with Kanghua NGO to bring volunteers on this tour to help promote the economic development and preservation of the local Qiang Minority culture in Maoxing County of Sichaun Province. For the panda work, we have partnered with the Dujiangyan Panda Center, which has been established by the Chinese Government in response to the dwindling numbers of wild Giant Pandas.  <a href = "http://www.globalfamilytravels.com/dujiangyan-panda-base" target="_blank" ><font color = #de622c>More about Dujiangyan Panda Center</font></a></p>
+            <p> <font color = #de622c>IMMERSE:</font> This Global Family Travels’ tour emphasizes authentic cultural immersion experiences to give you a true taste of China and an amazing opportunity to live and work with your host family and participate in a community service project with local villagers. Whether you find yourself drinking tea and playing Mahjong with the locals, joining in the morning Taiji practice, or making dumplings with a local family, this tour offers plenty of opportunities to “do as the locals do.”</p>
+			</div>
+		</section>
+
+		<section id="tab4" class="tab-content hide">
+			<div>
+        <center><IMG  SRC="https://static.wixstatic.com/media/7fb34b_ad50f99a077742189b4b67fe7a1552e8~mv2.png/v1/fill/w_1024,h_768,al_c/7fb34b_ad50f99a077742189b4b67fe7a1552e8~mv2.png" ALT="Kanghua Community Development Center" WIDTH=570 HEIGHT=400 /></center>
+			</div>
+		</section>
+
+  	</div>
+	</body>
+</html>
